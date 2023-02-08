@@ -1,0 +1,124 @@
+<div class=cointainer>
+  <h1>User Resistration</h1>
+  <form [formGroup]="UserInformation" (ngSubmit)="callingFunction()">
+    <div class="cointainer-formInput">
+      <label>
+        First Name:
+      </label>
+      <input type="text" formControlName="firstName" placeholder="Enter FirstName"onkeydown="return /[a-zA-Z]/i.test(event.key)">
+
+    </div>
+    <!-- <div class="form-text text-danger text-center" *ngIf="Firstname && Firstname.invalid && Firstname.touched">
+      Enter at leat 3 char
+    </div> -->
+    <div class="form-text text-danger text-center" *ngIf="Firstname && Firstname.errors?.['required'] && Firstname.touched">
+      Enter input
+    </div>
+    <div class="form-text text-danger text-center" *ngIf="Firstname && Firstname.errors?.['minlength'] ">
+      Enter at least 3 char
+    </div>
+    <div class="form-text text-danger text-center" *ngIf="Firstname && Firstname.errors?.['maxlength'] ">
+      Enter below 256 char
+    </div>
+    <div class="cointainer-formInput">
+      <label>
+        Last Name:
+      </label>
+      <input type="text" formControlName="lastName" placeholder="Enter LastName"onkeydown="return /[a-zA-Z]/i.test(event.key)">
+
+    </div>
+    <div class="form-text text-danger text-center" *ngIf="Lastname && Lastname.errors?.['required'] && Lastname.touched">
+      Enter input
+    </div>
+    <div class="form-text text-danger text-center" *ngIf="Lastname && Lastname.errors?.['minlength'] ">
+      Enter at least 3 char
+    </div>
+    <div class="form-text text-danger text-center" *ngIf="Lastname && Lastname.errors?.['maxlength']">
+      Enter below 256 char
+    </div>
+    <div class="cointainer-formInput">
+      <label>
+        Age:
+      </label>
+      <input type="number" formControlName="age" placeholder="Enter Age" max="999">
+
+    </div>
+    <div class="form-text text-danger text-center" *ngIf="age && age.errors?.['required'] && age.touched">
+      Enter input
+    </div>
+    <div class="form-text text-danger text-center" *ngIf="age && age.errors?.['max']">
+      Enter  value below 1000
+    </div>
+
+    
+    
+    <div class="cointainer-formInput">
+      <label>
+        Email:
+      </label>
+      <input type="text" formControlName="email" placeholder="Enter Email">
+
+    </div>
+    
+    <div class="form-text text-danger text-center" *ngIf="Email && Email.invalid && Email.touched">
+      Provide proper email id
+    </div>
+    <div class="cointainer-formInput">
+      <label>
+        Phone-no:
+      </label>
+      <input type="text" formControlName="phone" placeholder="Enter Phone Number " >
+
+    </div>
+    <div class="form-text text-danger text-center" *ngIf="phonenumber && phonenumber.errors?.['required'] && phonenumber.touched">
+      Enter input
+    </div>
+
+    <div class="form-text text-danger text-center" *ngIf="phonenumber && phonenumber.errors?.['maxlength']">
+      phone number is invalid
+    </div>
+    <div class="cointainer-formInput">
+      <label>
+        Username:
+      </label>
+      <input type="text" formControlName="username" placeholder="Enter Username"pattern="^[a-zA-Z0-9]+([._]?[.-]?[a-zA-Z0-9]+)*$" >
+
+    </div>
+    <div class="form-text text-danger text-center" *ngIf="username && username.errors?.['required'] && username.touched">
+      Enter input
+    </div>
+    <div class="form-text text-danger text-center" *ngIf="username && username.invalid &&username.errors?.['pattern'] ">
+      user name is invalid 
+    </div>
+    <div class="cointainer-formInput">
+      <label>
+        Additional data label:
+      </label>
+      <input type="text" [(ngModel)]="info" formControlName="additiondata" placeholder="Enter data">
+
+    </div>
+    <div class="form-text text-danger text-center" *ngIf="additionalinformation && additionalinformation.invalid && additionalinformation.touched">
+      input required
+    </div>
+    <app-additionaldata></app-additionaldata>
+    <div class="cointainer-formInput">
+      <label>
+        Given label:{{info}}
+      </label>
+      <!-- <input type="text" formControlName="label"> -->
+
+    </div>
+    <div class="cointainer-formInput">
+      <label>
+        Given value:
+      </label>
+      <input type="text" formControlName="value">
+
+    </div>
+    <div class="formButtons">
+      <button type="reset">reset</button>
+      <button type="submit">submit</button>
+    </div>
+  </form>
+
+</div>

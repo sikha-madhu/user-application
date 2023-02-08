@@ -1,0 +1,54 @@
+
+input[type=text] {
+    width: 50%;
+    padding: 8px 14px;
+    margin: 2px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(97, 83, 83);
+
+  }
+  input[type="number" i] {
+    width: 50%;
+    padding: 8px 14px;
+    margin: 2px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(97, 83, 83);
+
+  }
+  .cointainer{
+    display: block;
+    border-style: groove;
+    border-radius: 10px;
+    margin: 170px;
+  }
+  h1{
+    justify-content: center;
+    display:flex;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(61, 60, 60);
+  }
+  .formButtons{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  button{
+    display: flex;
+    float: right;
+    width: 58px;
+    height: 31px;
+    margin-right: 62px;
+    justify-content: space-around;
+    padding: 0px;
+    align-items: center;
+    cursor:pointer;
+}
+.cointainer-formInput{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 25px;
+    align-items: center;
+
+}
